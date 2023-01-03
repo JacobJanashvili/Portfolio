@@ -7,6 +7,7 @@
 
 header {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 nav {
   display: flex;
@@ -130,9 +131,9 @@ nav ul li:hover::after {
 
 .heroSliderWrapper{
   width: 100%;
-  margin-top: 50px;
   background-color: #353935;
-
+  height: 100%;
+  position: absolute;
 }
 
 @media (max-width: 428px) {
