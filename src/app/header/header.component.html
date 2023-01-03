@@ -1,0 +1,36 @@
+<header>
+  <nav>
+    <h1>Comfy<span class="grayed_logo">Store</span></h1>
+    <div class="subflex">
+      <ul>
+        <li>Home</li>
+        <li>Women</li>
+        <li>Men</li>
+        <li>Jewelry</li>
+      </ul>
+      <img class="cart" src="../assets/icons/bag-shopping-solid.svg" alt="" />
+      <a class="sign_up_btn" href="#">Sign Up</a>
+      <a href="#" class="burger_btn" (click)="toggleBurgerMenu()">☰</a>
+    </div>
+  </nav>
+  <div class="responsive_menu" [ngClass]="{ hidden: burgerMenuIsClosed }">
+    <p class="exit_sign" (click)="toggleBurgerMenu()">&#10006;</p>
+    <div class="responsive_sub_flex">
+      <ul>
+        <li>Home</li>
+        <li>Women</li>
+        <li>Men</li>
+        <li>Jewelry</li>
+        <li>My Items</li>
+        <li>My Account</li>
+      </ul>
+    </div>
+  </div>
+</header>
+<section class="heroSliderWrapper">
+  <swiper [slidesPerView]="3">
+    <ng-template swiperSlide>
+      <img src="../assets/images/jewelry.png" alt="" />
+    </ng-template>
+  </swiper>
+</section>

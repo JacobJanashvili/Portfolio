@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav .subflex {
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-left: 2%;
+}
+
+nav h1 span {
+  font-weight: 400;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart {
+  position: relative;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #353935;
+  margin: 0 auto;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+  transition: 0.3s ease-in;
+}
+
+.sign_up_btn {
+  text-decoration: none;
+  color: #353935;
+  padding: 10px 20px;
+  border: 2px solid #353935;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.sign_up_btn:hover {
+  color: white;
+  background-color: #353935;
+  transition: 0.3s ease-in;
+}
+
+.burger_btn {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: none;
+}
+
+.responsive_menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.responsive_sub_flex ul {
+  list-style: none;
+  margin: 15px;
+}
+
+.responsive_sub_flex ul li {
+  margin: 10px 0;
+}
+
+.responsive_sub_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.exit_sign {
+  color: white;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  right: 100%;
+}
+.responsive_menu_opened {
+  right: 0;
+  top: 0;
+}
+
+.heroSliderWrapper{
+  width: 100%;
+  margin-top: 50px;
+  background-color: #353935;
+
+}
+
+@media (max-width: 428px) {
+  nav .subflex ul {
+    display: none;
+  }
+  nav .subflex .cart{
+    display: none;
+  }
+  nav .subflex .sign_up_btn{
+    display: none;
+  }
+  nav .burger_btn{
+    display: block;
+  }
+}
