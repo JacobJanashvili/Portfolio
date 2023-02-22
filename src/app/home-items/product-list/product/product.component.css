@@ -1,0 +1,78 @@
+.items {
+  border-right: 1px solid rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 40px;
+  height: 300px;
+}
+
+.item-details {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.items a {
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  color: #1e1e27;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.items:hover {
+  background-color: white;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.items:hover #item-btn {
+  visibility: visible;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.item-img {
+  width: 172px;
+  height: 172px;
+  padding-top: 10px;
+  object-fit: contain;
+}
+
+#item-name:hover {
+  text-decoration: underline;
+}
+
+#item-name {
+  display: inline-block;
+  margin-top: 10%;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #1e1e27;
+  padding-top: 10px;
+}
+
+#item-btn {
+  background-color: #353935;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+#item-btn:hover {
+  background-color: #424742;
+}

@@ -13,6 +13,6 @@ export class HeaderComponent {
   }
   @HostListener("window:scroll",[])
   onWindowScroll(){
-    this.Scrolled=window.scrollY>=80
+    this.Scrolled=window.scrollY>=80;
   }
 }

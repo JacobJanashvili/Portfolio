@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-top: 2%;
+  margin-left: 8%;
+}
+
+.menu-women {
+  position: relative;
+  margin-right: 2%;
+}
+
+.menu-men {
+  margin-right: 2%;
+  position: relative;
+}
+
+.menu-jewelry {
+  position: relative;
+}
+
+.home-title-women {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.home-title-women a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-title-women:hover {
+  background-color: black;
+  transition: 0.3s;
+}
+
+.home-title-women:hover a {
+  color: white;
+}
+
+.home-title-men {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-title-men a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-title-men:hover {
+  background-color: black;
+  transition: 0.3s;
+}
+
+.home-title-men:hover a {
+  color: white;
+}
+
+.home-title-jewelry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-title-jewelry a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-title-jewelry:hover {
+  background-color: black;
+  transition: 0.3s;
+}
+
+.home-title-jewelry:hover a {
+  color: white;
+}
+
+.shop-item-section {
+  font-family: "Poppins", sans-serif;
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-item-section h1 {
+  font-size: 40px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-align: center;
+}
+
+.line_below_title {
+  display: block;
+  width: 4%;
+  height: 5px;
+  background-color: #353935;
+  margin-top: 1%;
+  text-align: center;
+}
+
+.newsletter {
+  margin-top: 10%;
+  background-color: #f2f2f2;
+  padding: 2% 0;
+}
+
+.newsletter h2 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.newsletter_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+.newsletter_title_div {
+  margin-left: 5%;
+}
+
+.subscribe_input_div {
+  display: flex;
+  align-items: center;
+  margin-left: -15%;
+}
+
+.subscribe_input {
+  width: 300px;
+  height: 46px;
+  text-indent: 5%;
+  outline: none;
+  border: none;
+}
+
+.subscribe_input:focus {
+  border: 1px solid #353935;
+}
+
+.subscribe_button {
+  width: 160px;
+  height: 46px;
+  background-color: #353935;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.subscribe_button:hover {
+  background-color: #393d39;
+  transition: 0.3s;
+}
+footer {
+  width: 100vw;
+}
+
+.subscribed {
+  width: 160px;
+  height: 46px;
+  background-color: gray;
+  cursor: not-allowed;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 912px) {
+  .wrapper {
+    width: 100%;
+    margin: 5% 0;
+  }
+
+  .wrapper img {
+    width: 100%;
+  }
+
+  .wrapper div {
+    padding: 0 10px;
+  }
+
+  .home-title-women {
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .home-title-men {
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .home-title-jewelry {
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .subscribe_input_div {
+    margin-top: 4%;
+  }
+
+  .newsletter h2 {
+    text-align: center;
+  }
+
+  .newsletter_wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter_title_div p {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+  }
+
+  .subscribe_input_div {
+    align-items: center;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .wrapper {
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+  .wrapper img {
+    width: 100%;
+  }
+
+  .wrapper div {
+    padding: 10px 0;
+  }
+
+  .line_below_title {
+    width: 15vw;
+  }
+
+  .newsletter_wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter_title_div p {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+  }
+
+  .subscribe_input_div {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+  }
+
+  .subscribe_input {
+    margin-bottom: 5%;
+  }
+}

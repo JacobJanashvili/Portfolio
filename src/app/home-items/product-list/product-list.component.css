@@ -1,0 +1,12 @@
+:host {
+  width: 85%;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 540px) {
+  .shop-item-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -9,19 +9,22 @@
 header {
   font-family: "Poppins", sans-serif;
   position: relative;
-  z-index: 2;
-  height: 200vh;
 }
+
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+
 }
 
 nav .subflex {
@@ -33,11 +36,15 @@ nav h1 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   margin-left: 2%;
-  color: whitesmoke;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin: 2%;
 }
 
 nav h1 span {
-  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
 }
 
 nav ul {
@@ -46,7 +53,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 13px;
   font-size: 13px;
   cursor: pointer;
   text-transform: uppercase;
@@ -55,7 +62,7 @@ nav ul li {
 
 .cart {
   position: relative;
-  margin: 0 15px;
+  margin: 0 13px;
   cursor: pointer;
 }
 
@@ -79,7 +86,7 @@ nav ul li:hover::after {
   padding: 10px 20px;
   border: 2px solid #353935;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .sign_up_btn:hover {
@@ -105,6 +112,7 @@ nav ul li:hover::after {
   padding: 10px;
   color: white;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .responsive_sub_flex ul {
@@ -131,69 +139,45 @@ nav ul li:hover::after {
 .hidden {
   right: 100%;
 }
+
 .responsive_menu_opened {
   right: 0;
   top: 0;
 }
 
-.heroWrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.heroWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.9;
-}
-@media (max-width: 428px) {
+
+@media screen and (max-width: 912px) {
+
+  nav {
+    width: 100vw;
+    padding: 1%;
+  }
+
   nav .subflex ul {
     display: none;
   }
+
   nav .subflex .cart {
     display: none;
   }
+
   nav .subflex .sign_up_btn {
     display: none;
   }
+
   nav .burger_btn {
     display: block;
+    margin-left: -5vw;
+    font-size: 20px;
+  }
+
+  .exit_sign {
+    font-size: 20px;
   }
 }
-.call_to_action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 50%;
-}
-.call_to_action p {
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
-}
-.call_to_action button{
-  padding: 15px 25px;
-  background: transparent;
-  border: 2px  solid white;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  letter-spacing: 2px; 
-}
 
-.call_to_action button:hover{
-  background-color: #353935;
-  border: 2px solid #353935;
-  transition: .3s ;
+@media (max-width: 414px) {
+  nav h1 {
+    font-size: 1rem;
+  }
 }
