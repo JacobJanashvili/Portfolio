@@ -32,6 +32,12 @@ nav .subflex {
   align-items: center;
 }
 
+nav .h1-link{
+  display: inline-block;
+  padding: 1%;
+  text-decoration: none;
+}
+
 nav h1 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -40,10 +46,11 @@ nav h1 {
   font-size: 20px;
   text-align: center;
   margin: 2%;
+  
 }
 
+
 nav h1 span {
-  display: inline-block;
   font-weight: 700;
 }
 

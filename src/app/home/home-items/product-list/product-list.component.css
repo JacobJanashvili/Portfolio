@@ -1,5 +1,5 @@
 :host {
-  width: 85%;
+  width: 90%;
   margin-top: 3%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './home/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeroComponent } from './hero/hero.component';
-import { HomeItemsComponent } from './home-items/home-items.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeroComponent } from './home/hero/hero.component';
+import { HomeItemsComponent } from './home/home-items/home-items.component';
+import { FooterComponent } from './home/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './product.service';
-import { ProductListComponent } from './home-items/product-list/product-list.component';
-import { ProductComponent } from './home-items/product-list/product/product.component';
+import { ProductListComponent } from './home/home-items/product-list/product-list.component';
+import { ProductComponent } from './home/home-items/product-list/product/product.component';
+import { CartComponent } from './home/cart/cart.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +22,17 @@ import { ProductComponent } from './home-items/product-list/product/product.comp
     HomeItemsComponent,
     FooterComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [ProductService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

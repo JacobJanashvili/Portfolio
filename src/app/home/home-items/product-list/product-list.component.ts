@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductComponent } from './product/product.component';
-import { ProductService } from '../../product.service';
+import { ProductService } from '../../../product.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
   womans_items: any = [];
@@ -16,12 +16,12 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.womans_items = this._productService
       .getWomens()
-      .subscribe(data => (this.womans_items = data));
+      .subscribe((data) => (this.womans_items = data));
     this.mens_items = this._productService
       .getMans()
-      .subscribe(data => (this.mens_items = data));
+      .subscribe((data) => (this.mens_items = data));
     this.jewelery = this._productService
       .getJewelery()
-      .subscribe(data => (this.jewelery = data));
+      .subscribe((data) => (this.jewelery = data));
   }
 }

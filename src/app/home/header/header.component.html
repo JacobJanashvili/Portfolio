@@ -1,14 +1,20 @@
 <header>
   <nav>
-    <h1>Comfy<span class="grayed_logo">Store</span></h1>
+    <a class="h1-link" routerLink="">
+      <h1>Comfy<span class="grayed_logo">Store</span></h1>
+    </a>
     <div class="subflex">
       <ul>
-        <li>Home</li>
+        <li>
+          <a>Home</a>
+        </li>
         <li>Women</li>
         <li>Men</li>
         <li>Jewelry</li>
       </ul>
-      <img class="cart" src="../assets/icons/bag-shopping-solid.svg" alt="" />
+      <a routerLink="cart">
+        <img class="cart" src="../assets/icons/bag-shopping-solid.svg" alt="" />
+      </a>
       <a class="sign_up_btn" href="#">Sign Up</a>
       <a href="#" class="burger_btn" (click)="toggleBurgerMenu()">☰</a>
     </div>

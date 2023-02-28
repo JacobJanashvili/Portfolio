@@ -5,13 +5,12 @@
   align-items: center;
   cursor: pointer;
   position: relative;
-  padding-bottom: 40px;
+  width: 100%;
   height: 300px;
+  padding-bottom: 40px;
 }
 
 .item-details {
-  padding-left: 5%;
-  padding-right: 5%;
   text-align: center;
 }
 
@@ -22,7 +21,6 @@
   font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .items:hover {
@@ -56,7 +54,7 @@
 .item-price {
   font-weight: 600;
   color: #1e1e27;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #item-btn {

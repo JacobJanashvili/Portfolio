@@ -1,13 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { ProductService } from '../product.service';
-import { CartService } from '../cart.service';
+import { ProductService } from '../../product.service';
+import { CartService } from '../../cart.service';
 import { ProductListComponent } from '../home-items/product-list/product-list.component';
 import { ProductComponent } from '../home-items/product-list/product/product.component';
 
 @Component({
   selector: 'app-home-items',
   templateUrl: './home-items.component.html',
-  styleUrls: ['./home-items.component.css']
+  styleUrls: ['./home-items.component.css'],
 })
 export class HomeItemsComponent {
   subscribed: boolean = false;

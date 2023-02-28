@@ -1,0 +1,112 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.cart-header-wrapper {
+  width: 100%;
+  background-color: #f3ead8;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.cart-header-wrapper h1 {
+  color: #292621;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.cart-header a {
+  text-decoration: none;
+  color: #74706b;
+  font-size: 15px;
+}
+
+.menu-cart::before {
+  color: #74706b;
+  content: "|";
+  padding: 0 10%;
+  padding-right: 8px;
+  font-size: 18px;
+  cursor: auto;
+}
+
+.cart-body {
+  margin-top: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cart-body-header {
+  width: inherit;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 2%;
+  align-items: center;
+  justify-content: right;
+  margin-left: 20%;
+}
+
+.cart-body-header p {
+  margin: 0 5%;
+}
+
+#product {
+  margin-right: 15%;
+}
+
+.item {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+}
+
+.delete-icon::before {
+  content: "\2715";
+}
+
+.item-img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.description-wrapper {
+  text-align: center;
+  word-break: break-all;
+  width: 30%;
+}
+
+.quantity {
+  display: flex;
+}
+
+.quantity_input {
+  width: 80px;
+  height: 40px;
+  text-indent: 30px;
+  outline: none;
+  box-shadow: none;
+  font-size: 1.5rem;
+}
+
+.quantity_plus,
+.quantity_minus {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  padding-top: 8%;
+}
