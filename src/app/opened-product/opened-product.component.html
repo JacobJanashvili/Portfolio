@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="item_wrapper" *ngIf="product_items">
+  <img class="item_img" src="{{ product_items.image }}" alt="" />
+  <div class="item_description_wrapper">
+    <h1 class="item_title">{{ product_items.title }}</h1>
+    <p class="item_price">{{ product_items.price | currency }}</p>
+    <p class="item_description">{{ product_items.description }}</p>
+    <a class="item_btn" (click)="handleAddToCart(this.product_items)">{{
+      "add to cart" | uppercase
+    }}</a>
+  </div>
+</div>
+<app-footer></app-footer>

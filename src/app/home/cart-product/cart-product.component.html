@@ -1,0 +1,16 @@
+<div class="item"  *ngFor="let item of cart">
+  <div class="delete-button" (click)="removeItem(item.id)">
+    <span class="delete-icon"></span>
+  </div>
+  <img class="item-img" src="{{ item.image }}" alt="" />
+  <div class="description-wrapper">
+    <h3 class="item-title">{{ item.title }}</h3>
+    <p class="item-description">
+      {{ item.description }}
+    </p>
+  </div>
+  <p class="price">${{ item.price }}</p>
+</div>
+<div *ngIf="!cart.length">
+  <img class="empty_cart_img" src="../../../assets/images/empty-cart.jpg" alt="">
+</div>

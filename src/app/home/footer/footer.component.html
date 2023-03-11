@@ -1,24 +1,30 @@
 <footer>
   <div class="wrapper">
+    <a class="h1-link" [routerLink]="'/home'">
+      <h1>Comfy<span class="grayed_logo">Store</span></h1>
+    </a>
     <ul class="menu">
       <li>
-        <a href="#">Blog</a>
+        <a [routerLink]="'/home'">{{'home' | uppercase}}</a>
       </li>
       <li>
-        <a href="#">About</a>
+        <a [routerLink]="'/womens'">{{'women' |uppercase}}</a>
       </li>
       <li>
-        <a href="#">Contact us</a>
+        <a [routerLink]="'/mens'">{{'men' | uppercase}}</a>
+      </li>
+      <li>
+        <a [routerLink]="'/jewelery'">{{'jewelery' | uppercase}}</a>
       </li>
     </ul>
     <div class="social">
-      <a href="#">
+      <a href="https://www.facebook.com/iakobi.janashvili/">
         <img src="assets/footer-social/facebook-f.svg">
       </a>
-      <a href="#">
+      <a href="https://www.instagram.com/janashviliiakobi">
         <img src="assets/footer-social/instagram.svg">
       </a>
-      <a href="#">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img src="assets/footer-social/youtube.svg">
       </a>
     </div>

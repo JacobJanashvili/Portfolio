@@ -1,34 +1,47 @@
 <header>
   <nav>
-    <a class="h1-link" routerLink="">
+    <a class="h1-link" [routerLink]="'/home'">
       <h1>Comfy<span class="grayed_logo">Store</span></h1>
     </a>
     <div class="subflex">
-      <ul>
+      <ul class="menu_items">
         <li>
-          <a>Home</a>
+          <a [routerLink]="'/home'">Home</a>
         </li>
-        <li>Women</li>
-        <li>Men</li>
-        <li>Jewelry</li>
+        <li><a [routerLink]="'/womens'">Women</a></li>
+        <li><a [routerLink]="'/mens'">Men</a></li>
+        <li><a [routerLink]="'/jewelery'">Jewelery</a></li>
       </ul>
-      <a routerLink="cart">
-        <img class="cart" src="../assets/icons/bag-shopping-solid.svg" alt="" />
+      <a [routerLink]="'/cart'" class="cart">
+        <img
+          class="cart_img"
+          src="/assets/icons/bag-shopping-solid.svg"
+          alt=""
+        />
+        <i class="cart_item_circle" *ngIf="cart.length">{{ cart.length }}</i>
       </a>
-      <a class="sign_up_btn" href="#">Sign Up</a>
-      <a href="#" class="burger_btn" (click)="toggleBurgerMenu()">☰</a>
+      <a class="burger_btn" (click)="toggleBurgerMenu()">☰</a>
     </div>
   </nav>
   <div class="responsive_menu" [ngClass]="{ hidden: burgerMenuIsClosed }">
     <p class="exit_sign" (click)="toggleBurgerMenu()">&#10006;</p>
     <div class="responsive_sub_flex">
       <ul>
-        <li>Home</li>
-        <li>Women</li>
-        <li>Men</li>
-        <li>Jewelry</li>
-        <li>My Items</li>
-        <li>My Account</li>
+        <li>
+          <a [routerLink]="'/home'"> Home </a>
+        </li>
+        <li>
+          <a [routerLink]="'/womens'">Women</a>
+        </li>
+        <li>
+          <a [routerLink]="'/mens'">Men</a>
+        </li>
+        <li>
+          <a [routerLink]="'/jewelery'">Jewelery</a>
+        </li>
+        <li>
+          <a [routerLink]="'/cart'">My Items</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,99 @@
+<div class="wrapper">
+  <div class="form_wrapper">
+    <h2>{{ "sign up" | uppercase }}</h2>
+    <form [formGroup]="surveyForm" class="survey_form">
+      <div class="form_div">
+        <label for="email" class="form_label">Email</label>
+        <input
+          type="text"
+          name="email"
+          formControlName="email"
+          [ngStyle]="{
+            border:
+              surveyForm.get('email').errors && surveyForm.get('email').touched
+                ? '1px solid red'
+                : ''
+          }"
+        />
+        <div *ngIf="surveyForm.get('email').touched || submitted">
+          <p
+            class="error_text"
+            *ngIf="surveyForm.get('email').errors?.['required']"
+          >
+            * Email required
+          </p>
+          <p
+            class="error_text"
+            *ngIf="surveyForm.get('email').errors?.['email']"
+          >
+            * Invalid email
+          </p>
+        </div>
+      </div>
+      <div class="form_div">
+        <label for="password" class="form_label">Password</label>
+        <input
+          type="password"
+          name="password"
+          formControlName="password"
+          [ngStyle]="{
+            border:
+              surveyForm.get('password').invalid &&
+              (surveyForm.get('password').touched || submitted)
+                ? '1px solid red'
+                : ''
+          }"
+        />
+        <div *ngIf="surveyForm.get('password').touched || submitted">
+          <p
+            class="error_text"
+            *ngIf="surveyForm.get('password').errors?.['minlength']"
+          >
+            * password must have at least 8 chararcters
+          </p>
+          <p
+            class="error_text"
+            *ngIf="surveyForm.get('password').errors?.['required']"
+          >
+            * password is required
+          </p>
+        </div>
+      </div>
+      <div class="form_div">
+        <label for="confirm_password" class="form_label"
+          >Confirm Password</label
+        >
+        <input
+          type="password"
+          name="confirm_password"
+          formControlName="confirmPassword"
+          [ngStyle]="{
+            border:
+              (surveyForm.get('confirmPassword').invalid || surveyForm.errors?.['mismatch']) &&
+              (surveyForm.get('confirmPassword').touched || submitted)
+                ? '1px solid red'
+                : ''
+          }"
+        />
+        <div
+          *ngIf="
+            (surveyForm.get('confirmPassword').touched || submitted) && surveyForm.errors?.['mismatch']
+          "
+        >
+          <p
+            class="error_text"
+            *ngIf="surveyForm.get('confirmPassword').errors?.['required']"
+          >
+            * please confirm your password
+          </p>
+          <p class="error_text" *ngIf="surveyForm.errors?.['mismatch']">
+            * passwords dont match
+          </p>
+        </div>
+      </div>
+      <button type="submit" class="form_submit" (click)="onSubmit()">
+        SIGN UP
+      </button>
+    </form>
+  </div>
+</div>

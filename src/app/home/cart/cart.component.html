@@ -7,35 +7,10 @@
   </div>
 </div>
 <div class="cart-body">
-  <div class="cart-body-header">
+  <div class="cart-body-header" *ngIf="cart.length">
     <p id="product">Product</p>
     <p>Price</p>
-    <p>Quantity</p>
-    <p>Total</p>
   </div>
-  <div class="item">
-    <div class="delete-button">
-      <span class="delete-icon"></span>
-    </div>
-    <img
-      class="item-img"
-      src="../../../assets/shop-item-images/mens1.png"
-      alt=""
-    />
-    <div class="description-wrapper">
-      <h3 class="item-title">Young man's cool coat</h3>
-      <p class="item-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse itaque
-        velit assumenda ipsum vero distinctio repellendus dolores est mollitia
-        cum!
-      </p>
-    </div>
-    <p class="price">$4.99</p>
-    <div class="quantity">
-      <span class="quantity_plus" #plus>&plus;</span>
-      <input type="text" name="quantity" class="quantity_input" #input />
-
-      <span class="quantity_minus" #minus>&minus;</span>
-    </div>
-  </div>
+  <app-cart-product-list></app-cart-product-list>
 </div>
+<app-footer></app-footer>

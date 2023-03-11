@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 540px) {
-  .shop-item-wrapper {
+  :host{
     grid-template-columns: repeat(2, 1fr);
   }
 }

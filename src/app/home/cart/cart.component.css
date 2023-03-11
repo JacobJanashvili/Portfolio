@@ -48,19 +48,23 @@
   background-color: rgba(0, 0, 0, 0.03);
   padding: 2%;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   margin-left: 20%;
 }
 
 .cart-body-header p {
-  margin: 0 5%;
+  margin: 0 8%;
 }
 
+#product{
+  margin-right: 15%;
+}
 
 
 .delete-button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .delete-icon::before {
@@ -79,25 +83,8 @@
   width: 30%;
 }
 
-.quantity {
-  display: flex;
-}
-
-.quantity_input {
-  width: 80px;
-  height: 40px;
-  text-indent: 30px;
-  outline: none;
-  box-shadow: none;
-  font-size: 1.5rem;
-}
-
-.quantity_plus,
-.quantity_minus {
-  display: block;
-  padding: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border: 1px solid black;
-  padding-top: 8%;
+@media (max-width:600px) {
+    .cart-body-header{
+      display: none;
+    }
 }

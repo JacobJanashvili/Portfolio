@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
 }
 
 footer {
@@ -14,15 +13,14 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
 }
-
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  flex-direction: column;
 }
 
 .menu_wrapper {
@@ -33,7 +31,6 @@ footer {
 .menu {
   display: flex;
   list-style: none;
-  margin-left: 5%;
 }
 
 .menu li {
@@ -48,7 +45,7 @@ footer {
 .social {
   display: flex;
   align-items: center;
-  margin-right: 7%;
+  margin-top: 2%;
 }
 
 .social a {
@@ -57,46 +54,62 @@ footer {
 
 .copyright {
   white-space: nowrap;
-  margin-left: 5%;
   margin-top: 3%;
+  text-align: center;
 }
 
-
-@media screen and (max-width:912px) 
-{
-    footer {
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5%;
-        margin-top: 1%;
-    }
-
-    .social {
-        margin-right: 0;
-        margin-top: 15%;
-    }
-    .menu a{
-      display: inline-block;
-      white-space: nowrap;
-      margin: 5% 0;
-    }
-    .menu{
-      margin: 0;
-      text-align: center;
-    }
+.h1-link {
+  display: inline-block;
+  text-decoration: none;
 }
 
-@media (max-device-width:540px){
-  .menu{
+h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+nav h1 span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 912px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .social {
+    margin-right: 0;
+    margin-top: 15%;
+  }
+  .menu a {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 5% 0;
+  }
+  .menu {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-device-width: 540px) {
+  .menu {
     display: block;
   }
 }
