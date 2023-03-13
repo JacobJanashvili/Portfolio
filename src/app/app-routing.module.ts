@@ -43,7 +43,10 @@ const ROUTES: Route[] = [
     component: OpenedProductComponent,
     canActivate: [IsAuthenticatedGuard],
   },
-  
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];
 
 @NgModule({
