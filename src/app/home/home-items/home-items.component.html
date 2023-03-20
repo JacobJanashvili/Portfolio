@@ -1,32 +1,32 @@
 <div class="wrapper">
   <div class="menu-women">
     <img src="assets/images/home-item-women.jpg" />
-    <div class="home-title-women">
-      <a [routerLink]="'/womens'">{{"womens's" | uppercase}}</a>
+    <div class="home-title-women" [routerLink]="'/womens'">
+      <a>{{ "womens's" | uppercase }}</a>
     </div>
   </div>
   <div class="menu-men">
     <img src="assets/images/home-item-men.jpg" />
-    <div class="home-title-men">
-      <a [routerLink]="'/mens'">{{"men's" | uppercase}}</a>
+    <div class="home-title-men" [routerLink]="'/mens'">
+      <a>{{ "men's" | uppercase }}</a>
     </div>
   </div>
   <div class="menu-jewelry">
     <img src="assets/images/home-item-jewelry.jpg" />
-    <div class="home-title-jewelry">
-      <a [routerLink]="'/jewelery'">{{'jewelery' | uppercase}}</a>
+    <div class="home-title-jewelry" [routerLink]="'/jewelery'">
+      <a>{{ "jewelery" | uppercase }}</a>
     </div>
   </div>
 </div>
 <section class="shop-item-section">
-  <h1>{{"new arrivals" | titlecase}}</h1>
+  <h1>{{ "new arrivals" | titlecase }}</h1>
   <div class="line_below_title"></div>
   <app-product-list></app-product-list>
 </section>
 <section class="newsletter">
   <div class="newsletter_wrapper">
     <div class="newsletter_title_div">
-      <h2>{{"newsleter" | titlecase}}</h2>
+      <h2>{{ "newsleter" | titlecase }}</h2>
       <p>Subscribe to our newsletter and get 20% off your first purchase</p>
     </div>
     <div class="subscribe_div">
