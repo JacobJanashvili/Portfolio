@@ -5,8 +5,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (max-width: 540px) {
+@media (min-width:280px) and (max-width: 540px) {
   :host{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }

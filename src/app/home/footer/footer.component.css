@@ -76,7 +76,7 @@ nav h1 span {
   font-weight: 700;
 }
 
-@media screen and (max-width: 912px) {
+@media (min-width: 280px) and (max-width: 912px) {
   footer {
     justify-content: center;
     align-items: center;
@@ -105,11 +105,10 @@ nav h1 span {
   .menu {
     margin: 0;
     text-align: center;
+    display: block;
+  }
+  .copyright{
+    font-size: .5rem;
   }
 }
 
-@media (max-device-width: 540px) {
-  .menu {
-    display: block;
-  }
-}
