@@ -5,7 +5,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media (min-width:280px) and (max-width: 540px) {
+@media (min-width:280px) and (max-width: 920px) {
   :host{
     grid-template-columns: repeat(1, 1fr);
   }
