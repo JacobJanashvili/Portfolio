@@ -150,6 +150,12 @@ nav ul li:hover::after {
 .responsive_sub_flex {
   display: flex;
   flex-direction: column;
+  color: white;
+}
+
+.responsive_sub_flex a{
+  text-decoration: none;
+  color: white;
 }
 
 .exit_sign {
