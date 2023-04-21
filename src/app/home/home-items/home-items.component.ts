@@ -1,8 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductService } from '../../product.service';
 import { CartService } from '../../cart.service';
-import { ProductListComponent } from '../home-items/product-list/product-list.component';
-import { ProductComponent } from '../home-items/product-list/product/product.component';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home-items',
@@ -11,11 +10,25 @@ import { ProductComponent } from '../home-items/product-list/product/product.com
 })
 export class HomeItemsComponent {
   subscribed: boolean = false;
+  emailForm: FormGroup;
+  submitted:boolean=false
+
   newsLetterSubscribe() {
-    this.subscribed = !this.subscribed;
+    this.submitted=true
+    if(this.emailForm.valid){
+      this.subscribed=!this.subscribed
+      this.emailForm.markAsUntouched
+
+    }
   }
   constructor(
     private _productService: ProductService,
     private _cart: CartService
-  ) {}
+  ) {
+    this.emailForm = new FormGroup({
+      email: new FormControl('', {
+        validators: [Validators.required, Validators.email],
+      }),
+    });
+  }
 }

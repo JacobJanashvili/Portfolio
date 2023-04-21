@@ -29,17 +29,45 @@
       <h2>{{ "newsleter" | titlecase }}</h2>
       <p>Subscribe to our newsletter and get 20% off your first purchase</p>
     </div>
-    <div class="subscribe_div">
-      <div class="subscribe_input_div">
-        <input type="text" class="subscribe_input" />
-        <button
-          [ngClass]="subscribed ? 'subscribed' : 'subscribe_button'"
-          (click)="newsLetterSubscribe()"
-          [disabled]="subscribed"
-        >
-          {{ subscribed ? "subscribed" : "subscribe" }}
-        </button>
+    <form [formGroup]="emailForm">
+      <div class="subscribe_div">
+        <div class="subscribe_input_div">
+          <input
+            type="text"
+            class="subscribe_input"
+            formControlName="email"
+            [ngStyle]="{
+              border:
+                (emailForm.get('email').errors && emailForm.get('email').touched) || submitted
+                  ? '1px solid red'
+                  : '1px solid #353935'
+            }"
+          />
+
+          <button
+            [ngClass]="subscribed ? 'subscribed' : 'subscribe_button'"
+            (click)="newsLetterSubscribe()"
+            [disabled]="subscribed"
+          >
+            {{ subscribed ? "subscribed" : "subscribe" }}
+          </button>
+        </div>
+        <div *ngIf="emailForm.get('email').touched || submitted">
+          <p
+            class="error_text"
+            *ngIf="emailForm.get('email').errors?.['required']"
+          >
+            * Email required
+          </p>
+          <p
+            class="error_text"
+            *ngIf="emailForm.get('email').errors?.['email']"
+          >
+            * Invalid email
+          </p>
+        </div>
+
       </div>
-    </div>
+    </form>
   </div>
 </section>

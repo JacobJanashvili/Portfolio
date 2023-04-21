@@ -170,6 +170,12 @@
   margin-left: 5%;
 }
 
+.error_text {
+  color: red;
+  font-size: 10px;
+}
+
+
 .subscribe_input_div {
   display: flex;
   align-items: center;

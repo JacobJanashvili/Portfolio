@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroComponent } from './home/hero/hero.component';
 import { HomeItemsComponent } from './home/home-items/home-items.component';
 import { FooterComponent } from './home/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ProductService } from './product.service';
 import { ProductListComponent } from './home/home-items/product-list/product-list.component';
 import { ProductComponent } from './home/home-items/product-list/product/product.component';
@@ -21,7 +21,8 @@ import { JeweleryComponent } from './home/jewelery/jewelery.component';
 import { OpenedProductComponent } from './opened-product/opened-product.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NetworkInterceptor } from './network.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +48,16 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatDialogModule,
+    MatProgressSpinnerModule,
   ],
-  providers: [ProductService],
+  providers: [
+    ProductService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NetworkInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

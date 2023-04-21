@@ -1,12 +1,19 @@
 <app-header></app-header>
 <section class="jewelery_wrapper">
-  <div class="items" *ngFor="let item of jewelery">
+  <div
+    class="items"
+    *ngFor="let item of jewelery"
+    [routerLink]="'/product'"
+    (click)="addId(item.id)"
+  >
     <img class="item-img" src="{{ item.image }}" />
     <div class="item-details">
-      <a id="item-name" [routerLink]="'/product'" (click)="addId(item.id)">{{ item.title | slice : 0 : 30 }}</a>
+      <a id="item-name" [routerLink]="'/product'" (click)="addId(item.id)">{{
+        item.title | slice : 0 : 30
+      }}</a>
       <p class="item-price">${{ item.price }}</p>
     </div>
     <a id="item-btn" (click)="handleAddToCart(this.item)">ADD TO CART</a>
   </div>
 </section>
-<app-footer></app-footer>
+<app-footer *ngIf="!(loaded | async)"></app-footer>

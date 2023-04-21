@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/product.service';
 import { CartService } from 'src/app/cart.service';
+import { LoadingService } from 'src/app/loading.service';
 @Component({
   selector: 'app-mens',
   templateUrl: './mens.component.html',
@@ -10,8 +11,10 @@ export class MensComponent implements OnInit {
   mens_items: any = [];
   constructor(
     private _productService: ProductService,
-    private _cart: CartService
+    private _cart: CartService,
+    private _loading:LoadingService
   ) {}
+  loaded=this._loading.loading$
   ngOnInit() {
     this.mens_items = this._productService
       .getMansFull()

@@ -14,10 +14,12 @@ import { ProductService } from 'src/app/product.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
+  itemClicked:boolean=false
   @Input() data: any;
   constructor(private _cart: CartService,private _product:ProductService) {}
   handleAddToCart(item: any) {
     this._cart.addToCart(item);
+    this.itemClicked=true
   }
   addId(item: number) {
     this._product.setID(item)

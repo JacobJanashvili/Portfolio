@@ -1,10 +1,12 @@
-<div class="items" *ngFor="let item of data">
-  <img class="item-img" src="{{ item.image }}" />
-  <div class="item-details">
+<div class="items" *ngFor="let item of data" >
+  <img class="item-img" src="{{ item.image }}" (click)="addId(item.id)" [routerLink]="'/product'"/>
+  <div class="item-details" (click)="addId(item.id)" [routerLink]="'/product'">
     <a id="item-name" (click)="addId(item.id)" [routerLink]="'/product'">{{
       item.title | slice : 0 : 30
     }}</a>
     <p class="item-price">${{ item.price }}</p>
   </div>
-  <a id="item-btn" (click)="handleAddToCart(this.item)">ADD TO CART</a>
+  <a id="item-btn" (click)="handleAddToCart(this.item)" *ngIf="itemClicked==false">ADD TO CART</a>
+  <a id="item-btn" (click)="handleAddToCart(this.item)" *ngIf="itemClicked==true">ITEM ADDED</a>
+
 </div>
