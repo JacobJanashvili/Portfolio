@@ -11,5 +11,5 @@
     }}</a>
     <p class="item-price">${{ item.price }}</p>
   </div>
-  <a id="item-btn" (click)="handleAddToCart(this.item)">ADD TO CART</a>
+  <a id="item-btn" (click)="handleAddToCart(this.item)">{{cart.includes(item)? "ITEM ADDED" : "ADD ITEM"}}</a>
 </div>

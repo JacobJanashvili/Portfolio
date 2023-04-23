@@ -14,8 +14,9 @@ import { ProductService } from 'src/app/product.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  cart=this._cart.cart
   @Input() data: any;
+  itemClicked:boolean=false
+  cart=this._cart.cart
   constructor(private _cart: CartService,private _product:ProductService) {}
   handleAddToCart(item: any) {
     this._cart.addToCart(item);
