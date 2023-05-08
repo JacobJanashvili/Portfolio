@@ -28,6 +28,10 @@
   position: relative;
 }
 
+.img_div img{
+  margin-bottom: 10%;
+}
+
 .home-title-women {
   display: flex;
   justify-content: center;
