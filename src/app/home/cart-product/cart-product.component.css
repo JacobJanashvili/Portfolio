@@ -30,12 +30,19 @@
   width: 30%;
 }
 
-.empty_cart_img{
+.empty_cart_img {
   margin-left: 25%;
 }
 
-@media (max-width:600px){
-  .item{
+.price{
+  font-weight: bold;
+}
+
+@media (min-width: 280px) and (max-width: 912px) {
+  .item {
     flex-direction: column;
+  }
+  .description-wrapper{
+    width: 100%;
   }
 }
